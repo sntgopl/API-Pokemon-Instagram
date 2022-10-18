@@ -11,3 +11,9 @@ const newId = async () => {
 };
 
 export default newId;
+
+// App ID: 1
+// pYoDA8k987Eio52IyF50
+
+// App ID: 1
+// IJd6Da8dwtRjMMAE92Va
