@@ -4,9 +4,7 @@ html * {
 }
 
 #popUp {
-  /* change display to none before merge to dev */
-  display: flex;
-  /* display: none; */
+  display: none;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
