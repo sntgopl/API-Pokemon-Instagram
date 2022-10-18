@@ -11,6 +11,11 @@ const renderPopup = (data) => {
   <button type="button" id="close-btn">X</button>
   `;
   popup.innerHTML = content;
+
+  const closeBtn = document.querySelector('#close-btn');
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
 };
 
 export default renderPopup;
