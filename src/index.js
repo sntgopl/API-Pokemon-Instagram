@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _ from 'lodash'; // eslint-disable-line
 import './style.css';
 import fetchPopup from './modules/fetchPopup.js';
 
@@ -6,6 +6,6 @@ const openBtn = document.querySelector('#tmp-popup-open');
 const popup = document.querySelector('#popUp');
 
 openBtn.addEventListener('click', () => {
-  fetchPopup(2);
+  fetchPopup(10);
   popup.style.display = 'flex';
 });
