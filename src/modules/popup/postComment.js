@@ -1,6 +1,6 @@
 import Comment from './newComment.js';
 
-const newComment = async () => {
+const postComment = async () => {
   const comment = new Comment('1', 'username', 'comment');
   const api = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
   const appId = 'IJd6Da8dwtRjMMAE92Va';
@@ -17,4 +17,4 @@ const newComment = async () => {
   console.log(fetched); // eslint-disable-line
 };
 
-export default newComment;
+export default postComment;

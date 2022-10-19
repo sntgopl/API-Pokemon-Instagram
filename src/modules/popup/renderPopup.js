@@ -1,6 +1,9 @@
 const popup = document.querySelector('#popup');
 
 const renderPopup = (data) => {
+  // keep this console.log to check the data fetched in the console
+  console.log(data.sprites.front_default); // eslint-disable-line
+
   const content = `
   <img class="popup-img" src="${data.sprites.front_default}" alt="popup image">
   <h2>${data.name}</h2>

@@ -1,4 +1,4 @@
-const newId = async () => {
+const newAppId = async () => {
   const response = fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/', {
     method: 'POST',
     // body: JSON.stringify(gameName),
@@ -10,7 +10,7 @@ const newId = async () => {
   console.log(fetched); // eslint-disable-line
 };
 
-export default newId;
+export default newAppId;
 
 // App ID: 1
 // pYoDA8k987Eio52IyF50
