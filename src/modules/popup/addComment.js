@@ -3,7 +3,7 @@ import Comment from './newComment.js';
 const newComment = async () => {
   const comment = new Comment('1', 'username', 'comment');
   const api = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-  const appId = 'pYoDA8k987Eio52IyF50';
+  const appId = 'IJd6Da8dwtRjMMAE92Va';
   const url = `${api}${appId}/comments`;
 
   const response = fetch(`${url}`, {

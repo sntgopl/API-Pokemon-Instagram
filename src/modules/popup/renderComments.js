@@ -1,18 +1,14 @@
-const popup = document.querySelector('#popup');
+const renderComments = (comments) => {
+  const commentsTitle = document.querySelector('#comments-title');
+  const commentsList = document.querySelector('#comments-list');
 
-const renderComments = () => {
-  const content = `
-  <div id="comments-container">
-    <h2>Comments</h2>
-    <ul id="comments-list">
-      <li>date1 user1 comment1</li>
-      <li>date2 user2 comment2</li>
-      <li>date3 user3 comment3</li>
-      <li>date4 user4 comment4</li>
-    </ul>
-  </div>
-  `;
-  popup.insertAdjacentHTML('beforeend', content);
+  const commentsCount = comments.length;
+  commentsTitle.innerHTML = `Comments (${commentsCount})`;
+
+  const content = comments.map((comment) => `
+  <li>${comment.creation_date} - ${comment.username} - ${comment.comment}</li>
+  `).join('');
+  commentsList.innerHTML = content;
 };
 
 export default renderComments;
