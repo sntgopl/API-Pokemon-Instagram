@@ -38,7 +38,7 @@ li {
   height: 1rem;
 }
 
-.attributes{
+.attributes {
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
