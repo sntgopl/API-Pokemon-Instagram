@@ -1,4 +1,4 @@
-const popup = document.querySelector('#popUp');
+const popup = document.querySelector('#popup');
 
 const renderPopup = (data) => {
   const content = `

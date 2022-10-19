@@ -4,7 +4,7 @@ html * {
   padding: 0;
 }
 
-#popUp {
+#popup {
   display: none;
   flex-flow: column nowrap;
   justify-content: flex-start;
