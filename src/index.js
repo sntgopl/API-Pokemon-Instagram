@@ -1,8 +1,8 @@
 import _ from 'lodash'; // eslint-disable-line
 import './style.css';
 import fetchPopup from './modules/fetchPopup.js';
-import renderHomepage from './modules/homepage/renderHomepage.js';
 import renderPopup from './modules/renderPopup.js';
+import loopRender from './modules/homepage/loopRenderHomepage.js';
 
 const openBtn = document.querySelector('#tmp-popup-open');
 const popup = document.querySelector('#popup');
@@ -14,8 +14,4 @@ openBtn.addEventListener('click', () => {
   pokeCard.style.display = 'none';
 });
 
-pokeCard.innerHTML = '';
-
-for (let i = 0; i <= 9; i += 1) {
-  fetchPopup(i, renderHomepage);
-}
+loopRender(6);
