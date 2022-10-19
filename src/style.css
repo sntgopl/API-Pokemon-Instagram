@@ -11,8 +11,8 @@ html * {
   align-items: center;
   position: absolute;
   top: 5vh;
-  left: 20vw;
-  width: 60vw;
+  left: 35vw;
+  width: 30vw;
   height: auto;
   margin: 2rem auto;
   padding: 2rem;
@@ -22,7 +22,7 @@ html * {
 }
 
 .popup-img {
-  width: 80%;
+  width: 60%;
   height: auto;
 }
 
@@ -34,11 +34,23 @@ html * {
   height: 1rem;
 }
 
-.attributes {
+.attributes,
+#comments-list {
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
   justify-content: center;
+  width: 80%;
+}
+
+#comments-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  gap: 1rem;
 }
 
 /* hello */
