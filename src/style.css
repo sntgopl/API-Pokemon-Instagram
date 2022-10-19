@@ -38,13 +38,21 @@ li {
   height: 1rem;
 }
 
-.attributes,
-#comments-list {
+.attributes{
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
-  justify-content: center;
+  justify-content: space-between;
   width: 80%;
+}
+
+#comments-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  align-self: start;
+  font-size: 0.9rem;
+  margin-left: 1rem;
 }
 
 #comments-container {
