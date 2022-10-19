@@ -1,3 +1,5 @@
+import pokeCard from './homepage/renderHomepage.js';
+
 const popup = document.querySelector('#popup');
 
 const renderPopup = (data) => {
@@ -17,6 +19,7 @@ const renderPopup = (data) => {
   const closeBtn = document.querySelector('#close-btn');
   closeBtn.addEventListener('click', () => {
     popup.style.display = 'none';
+    pokeCard.style.display = 'flex';
   });
 };
 
