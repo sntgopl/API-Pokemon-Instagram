@@ -1,3 +1,5 @@
+import write from './homepage/renderHomepage.js';
+
 const fetchPopup = async (id, fn) => {
   const response = fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
   const data = await (await response).json();
@@ -5,5 +7,13 @@ const fetchPopup = async (id, fn) => {
   console.log(data.sprites.front_default); // eslint-disable-line
   fn(data);
 };
+
+const fetchLoop = (n) => {
+  for (let i = 0; i < n; i += 1) {
+    fetchPopup(i, write);
+  }
+};
+
+fetchLoop(3);
 
 export default fetchPopup;
