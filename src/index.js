@@ -13,3 +13,7 @@ const popup = document.querySelector('#popup');
 import fetchList from './modules/homepage/homepage.js';
 
 fetchList(10);
+
+import { addLike, getAllLikes } from './modules/homepage/likes';
+
+getAllLikes(10);

@@ -6,7 +6,7 @@ const renderComments = (comments) => {
   commentsTitle.innerHTML = `Comments (${commentsCount})`;
 
   const content = comments.map((comment) => `
-  <li class="comment">${comment.creation_date} - ${comment.username} - ${comment.comment}</li>
+  <li class="comment">(${comment.creation_date}) - ${comment.username}: ${comment.comment}</li>
   `).join('');
   commentsList.innerHTML = content;
 };
