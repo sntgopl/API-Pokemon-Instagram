@@ -1,6 +1,7 @@
-const popup = document.querySelector('#popup');
+export const popup = document.querySelector('#popup');
+export const homeSection = document.querySelector('#homepage');
 
-const renderPopup = (data) => {
+export const renderPopup = (data) => {
   // keep this console.log to check the data fetched in the console
   console.log(data.sprites.front_default); // eslint-disable-line
 
@@ -25,7 +26,6 @@ const renderPopup = (data) => {
   const closeBtn = document.querySelector('#close-btn');
   closeBtn.addEventListener('click', () => {
     popup.style.display = 'none';
+    homeSection.style.display = 'flex';
   });
 };
-
-export default renderPopup;
