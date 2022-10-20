@@ -1,6 +1,6 @@
 import getPokemon from '../apis/getPokemon.js';
-
-const homeSection = document.querySelector('#homepage');
+import getComments from '../popup/getComments.js';
+import { popup, renderPopup, homeSection } from '../popup/renderPopup.js';
 
 const pokemonList = [];
 
@@ -20,6 +20,16 @@ const write = (list) => {
 		</div>
 		`)
 		.join(' ');
+		const commentBtn = document.querySelectorAll('.comment-button');
+		commentBtn.forEach((button, index) => {
+			button.addEventListener('click', () => {
+				getPokemon(index + 1, renderPopup);
+				getComments(index + 1);
+				popup.style.display = 'flex';
+				homeSection.style.display = 'none';
+				console.log(index)
+			})
+		})
 }
 
 const fetchList = async (n) => {
