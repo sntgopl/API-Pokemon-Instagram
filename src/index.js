@@ -9,8 +9,6 @@ import renderPopup from './modules/popup/renderPopup.js';
 const openBtn = document.querySelector('#tmp-popup-open');
 const popup = document.querySelector('#popup');
 
-// getPokemon(1, renderPopup);
-// popup.style.display = 'flex';
 
 openBtn.addEventListener('click', () => {
   getPokemon(1, renderPopup);
@@ -20,10 +18,6 @@ openBtn.addEventListener('click', () => {
   popup.style.display = 'flex';
 });
 
-const mmm = (data) => {
-  console.log(data.name);
-};
+import fetchList from './modules/homepage/homepage.js';
 
-for (let i = 1; i < 4; i += 1) {
-  getPokemon(i, mmm);
-}
+fetchList(10);
