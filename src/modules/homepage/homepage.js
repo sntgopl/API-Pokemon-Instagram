@@ -31,10 +31,10 @@ const write = (list) => {
       homeSection.style.display = 'none';
     });
   });
-	const likeBtn = document.querySelectorAll('.likes');
-	likeBtn.forEach((button, index) => {
-		button.addEventListener('click', addLike(index))
-	})
+  const likeBtn = document.querySelectorAll('.likes');
+  likeBtn.forEach((button, index) => {
+    button.addEventListener('click', addLike(index));
+  });
 };
 
 const fetchList = async (n) => {

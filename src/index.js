@@ -7,9 +7,6 @@ import getComments from './modules/popup/getComments.js';
 import { renderPopup } from './modules/popup/renderPopup.js';
 import homeSection from './modules/homepage/homepage.js';
 
-const openBtn = document.querySelector('#tmp-popup-open');
-const popup = document.querySelector('#popup');
-
 import fetchList from './modules/homepage/homepage.js';
 
-fetchList(10);
+fetchList(11);

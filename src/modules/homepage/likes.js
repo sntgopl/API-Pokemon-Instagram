@@ -28,21 +28,20 @@ const getLikes = async (id) => {
   const url = `${api}${appId}/likes?item_id=${id}`;
 
   const response = fetch(`${url}`);
-  const data = await (await response).json()
-    .then((data) => {
-        const e = document.createElement('p');
-        e.classList.add('likes');
-        e.innerHTML = `${data[id].likes}`;
-        const likeDiv = document.querySelectorAll('.like-section');
-        likeDiv[id].appendChild(e);
-        console.log(data);        
-    });
+  const data = await (await response).json();
+
+  const e = document.createElement('p');
+  e.classList.add('likes');
+  e.innerHTML = `${data[id].likes}`;
+  const likeDiv = document.querySelectorAll('.like-section');
+  likeDiv[id].appendChild(e);
+  console.log(data);
 };
 
 const getAllLikes = async (n) => {
-    for (let i = 0; i < n; i += 1) {
-        await getLikes(i);
-    }
-}
+  for (let i = 0; i < n; i += 1) {
+    await getLikes(i);
+  }
+};
 
 export { addLike, getAllLikes };
