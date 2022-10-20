@@ -6,6 +6,7 @@ export const renderPopup = (data) => {
   console.log(data.sprites.front_default); // eslint-disable-line
 
   const content = `
+  <button type="button" id="close-btn">X</button>
   <img class="popup-img" src="${data.sprites.front_default}" alt="popup image">
   <h2>${data.name}</h2>
   <div class="attributes">
@@ -19,7 +20,6 @@ export const renderPopup = (data) => {
     <ul id="comments-list">
     </ul>
   </div>
-  <button type="button" id="close-btn">X</button>
   `;
   popup.innerHTML = content;
 
