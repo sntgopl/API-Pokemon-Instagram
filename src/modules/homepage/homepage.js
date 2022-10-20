@@ -17,6 +17,7 @@ const write = (list) => {
 			<div class="like-section"><i class="fa-regular fa-heart heart"></i><p>5 likes</p></div>
 		</div>
 		<button class="comment-button">Comments</button>
+		<p class="number">#${data.id.toString().padStart(3, 0)}</p>
 		</div>
 		`)
 		.join(' ');
