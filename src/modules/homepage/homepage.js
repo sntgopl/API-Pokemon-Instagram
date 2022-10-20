@@ -5,7 +5,7 @@ import { popup, renderPopup, homeSection } from '../popup/renderPopup.js';
 const pokemonList = [];
 
 const mmm = (data) => {
-    pokemonList.push(data);
+		pokemonList.push(data);
 };
 
 const write = (list) => {
@@ -13,7 +13,7 @@ const write = (list) => {
 		<div class="card">
 		<img class="pokemon-img" src="${data.sprites.front_default}" alt="Pokemon img">
 		<div class="card-data">
-			<h2 class="pokemon-name">${data.name}</h2>
+			<h2 class="pokemon-name">${data.name.toUpperCase().slice(0,1)+data.name.slice(1, data.name.length)}</h2>
 			<div class="like-section"><i class="fa-regular fa-heart heart"></i><p>5 likes</p></div>
 		</div>
 		<button class="comment-button">Comments</button>
@@ -37,6 +37,7 @@ const fetchList = async (n) => {
 			await getPokemon(i, mmm);
     }
 		write(pokemonList);
+		console.log(pokemonList);
 }
 
 export default fetchList;
