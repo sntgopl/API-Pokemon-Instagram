@@ -9,4 +9,8 @@ import homeSection from './modules/homepage/homepage.js';
 
 import fetchList from './modules/homepage/homepage.js';
 
-fetchList(11);
+fetchList(10);
+
+import { getAllLikes } from './modules/homepage/likes.js';
+
+getAllLikes(10);
