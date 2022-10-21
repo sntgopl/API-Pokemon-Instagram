@@ -8,12 +8,11 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   height: 99vh;
   width: 98vw;
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color:rgb(193, 255, 234);
+  background-color: rgb(193, 255, 234);
 }
 
 nav {
@@ -43,10 +42,10 @@ li {
   left: 35vw;
   width: 30vw;
   height: auto;
-  background-image: radial-gradient(circle, white,rgba(255, 205, 140, 0.685), gold);
+  background-image: radial-gradient(circle, white, rgba(255, 205, 140, 0.685), gold);
   box-shadow: 5px 5px 15px rgba(48, 27, 0, 0.918);
   border-radius: 15px;
-  border: 6px inset ;
+  border: 6px inset;
 }
 
 #popup h2 {
@@ -60,7 +59,7 @@ li {
   width: 60%;
   height: auto;
   background-image: linear-gradient(45deg, red, blue);
-  animation: background 15s linear infinite ;
+  animation: background 15s linear infinite;
 }
 
 #close-btn {
@@ -70,7 +69,7 @@ li {
   height: 2rem;
   border: 5px solid rgba(255, 250, 244, 0.685);
   border-radius: 10px;
-  color: rgba(48, 27, 0, 0.918)
+  color: rgba(48, 27, 0, 0.918);
 }
 
 .attributes {
@@ -80,7 +79,7 @@ li {
   justify-content: space-between;
   width: 80%;
   border: 3px inset;
-  padding: .5rem;
+  padding: 0.5rem;
   font-family: 'Courier New', Courier, monospace;
   color: white;
   text-shadow: 1.5px 1.5px black;
@@ -112,7 +111,6 @@ li {
 
 /* hello */
 
-
 #menu {
   list-style: none;
   display: flex;
@@ -120,7 +118,7 @@ li {
 }
 
 #homepage {
-  height: fit-content;
+  height: auto;
   width: 99vw;
   display: flex;
   flex-direction: row;
@@ -132,9 +130,9 @@ li {
 }
 
 .card {
-  background-color:rgba(255, 205, 140, 0.685);
+  background-color: rgba(255, 205, 140, 0.685);
   border-radius: 15px 50px;
-  border: 3px inset ;
+  border: 3px inset;
   height: 30vh;
   width: 25vw;
   display: flex;
@@ -153,22 +151,25 @@ li {
   height: 35%;
   width: 35%;
   background-image: linear-gradient(45deg, red, blue);
-  animation: background 15s linear infinite ;
+  animation: background 15s linear infinite;
 }
 
 @keyframes background {
   0% {
-      background-image: linear-gradient(60deg, red, blue);
-      border-radius: 150px 200px 100px 150px;
+    background-image: linear-gradient(60deg, red, blue);
+    border-radius: 150px 200px 100px 150px;
   }
+
   25% {
     background-image: linear-gradient(75deg, red, blue);
     border-radius: 150px 150px 200px 100px;
   }
+
   50% {
     background-image: linear-gradient(60deg, red, blue);
     border-radius: 100px 150px 150px 200px;
   }
+  
   75% {
     background-image: linear-gradient(45deg, red, blue);
     border-radius: 200px 100px 150px 150px;
