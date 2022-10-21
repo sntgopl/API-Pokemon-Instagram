@@ -11,16 +11,16 @@ const mmm = (data) => {
 
 const write = (list) => {
   homeSection.innerHTML = list.map((data) => `
-		<div class="card">
-		<img class="pokemon-img" src="${data.sprites.front_default}" alt="Pokemon img">
-		<div class="card-data">
-			<h2 class="pokemon-name">${data.name.toUpperCase().slice(0, 1) + data.name.slice(1, data.name.length)}</h2>
-			<div class="like-section"><i class="fa-regular fa-heart heart"></i><p class="likes"></p></div>
-		</div>
-		<button class="comment-button">Comments</button>
-		<p class="number">#${data.id.toString().padStart(3, 0)}</p>
-		</div>
-		`)
+<div class="card">
+<img class="pokemon-img" src="${data.sprites.front_default}" alt="Pokemon img">
+<div class="card-data">
+<h2 class="pokemon-name">${data.name.toUpperCase().slice(0, 1) + data.name.slice(1, data.name.length)}</h2>
+<div class="like-section"><i class="fa-regular fa-heart heart"></i><p class="likes"></p></div>
+</div>
+<button class="comment-button">Comments</button>
+<p class="number">#${data.id.toString().padStart(3, 0)}</p>
+</div>
+`)
     .join(' ');
   const commentBtn = document.querySelectorAll('.comment-button');
   commentBtn.forEach((button, index) => {
@@ -42,7 +42,7 @@ const write = (list) => {
 
 const fetchList = async (n) => {
   for (let i = 1; i < n; i += 1) {
-    await getPokemon(i, mmm);
+    await getPokemon(i, mmm); // eslint-disable-line
   }
   write(pokemonList);
 };

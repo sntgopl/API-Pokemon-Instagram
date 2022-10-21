@@ -18,10 +18,11 @@ const addLike = async (id) => {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
+  // eslint-disable-next-line no-unused-vars
   const fetched = await (await response).text();
   const heart = document.querySelectorAll('.heart');
   heart[id].className = 'fa-solid fa-heart heart';
-  //  console.log(fetched); // eslint-disable-line
+  console.log(fetched); // eslint-disable-line
 };
 
 const getLikes = async (id) => {
@@ -31,14 +32,14 @@ const getLikes = async (id) => {
 
   const response = fetch(`${url}`);
   const data = await (await response).json();
-  const result = await data.find(({ item_id }) => item_id === id);
+  const result = await data.find(({ item_id }) => item_id === id); //eslint-disable-line
   const e = document.querySelectorAll('.likes');
   e[id].innerHTML = result.likes;
 };
 
 const getAllLikes = async (n) => {
   for (let i = 0; i < n; i += 1) {
-    await getLikes(i);
+    await getLikes(i); // eslint-disable-line
   }
 };
 
