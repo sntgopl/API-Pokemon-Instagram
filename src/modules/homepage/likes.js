@@ -8,7 +8,7 @@ class Like {
 const addLike = async (id) => {
   const likes = new Like(1, id);
   const api = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-  const appId = 'IJd6Da8dwtRjMMAE92Va';
+  const appId = 'pYoDA8k987Eio52IyF50';
   const url = `${api}${appId}/likes`;
 
   const response = fetch(`${url}`, {
@@ -19,23 +19,21 @@ const addLike = async (id) => {
     },
   });
   const fetched = await (await response).text();
+  const heart = document.querySelectorAll('.heart');
+  heart[id].className = 'fa-solid fa-heart heart';
   //  console.log(fetched); // eslint-disable-line
 };
 
 const getLikes = async (id) => {
   const api = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
-  const appId = 'IJd6Da8dwtRjMMAE92Va';
+  const appId = 'pYoDA8k987Eio52IyF50';
   const url = `${api}${appId}/likes?item_id=${id}`;
 
   const response = fetch(`${url}`);
   const data = await (await response).json();
-
-  const e = document.createElement('p');
-  e.classList.add('likes');
-  e.innerHTML = `${data[id].likes}`;
-  const likeDiv = document.querySelectorAll('.like-section');
-  likeDiv[id].appendChild(e);
-  console.log(data);
+  const result = await data.find(({ item_id }) => item_id === id);
+  const e = document.querySelectorAll('.likes');
+  e[id].innerHTML = result.likes;
 };
 
 const getAllLikes = async (n) => {
@@ -44,4 +42,4 @@ const getAllLikes = async (n) => {
   }
 };
 
-export { addLike, getAllLikes };
+export { addLike, getAllLikes, getLikes };

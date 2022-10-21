@@ -145,8 +145,6 @@ li {
 }
 
 .card:hover {
-  height: 30.5vh;
-  width: 25.5vw;
   box-shadow: 10px 10px 15px rgba(48, 27, 0, 0.918);
 }
 

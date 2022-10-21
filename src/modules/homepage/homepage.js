@@ -1,7 +1,7 @@
 import getPokemon from '../apis/getPokemon.js';
 import getComments from '../popup/getComments.js';
 import { popup, renderPopup, homeSection } from '../popup/renderPopup.js';
-import { addLike } from './likes.js';
+import { addLike, getLikes } from './likes.js';
 
 const pokemonList = [];
 
@@ -31,9 +31,12 @@ const write = (list) => {
       homeSection.style.display = 'none';
     });
   });
-  const likeBtn = document.querySelectorAll('.likes');
+  const likeBtn = document.querySelectorAll('.heart');
   likeBtn.forEach((button, index) => {
-    button.addEventListener('click', addLike(index));
+    button.addEventListener('click', () => {
+      addLike(index);
+      getLikes(index);
+    });
   });
 };
 
