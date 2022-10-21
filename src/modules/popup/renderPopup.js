@@ -20,6 +20,11 @@ export const renderPopup = (data) => {
     <ul id="comments-list">
     </ul>
   </div>
+  <form id="comment-form">
+    <h3>Add a comment</h3>
+    <input type="text" id="name" placeholder="Your name" required>
+    <textarea id="comment" placeholder="Your insights" required></textarea>
+    <button type="submit" id="comment-btn">Comment</button>
   `;
   popup.innerHTML = content;
 
