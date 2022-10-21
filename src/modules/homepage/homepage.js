@@ -37,7 +37,7 @@ const write = (list) => {
   likeBtn.forEach((button, index) => {
     button.addEventListener('click', () => {
       addLike(index);
-      getLikes(index);
+      getLikes(index-1);
     });
   });
 };
