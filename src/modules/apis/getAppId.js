@@ -10,7 +10,9 @@ const getAppId = async () => {
   console.log(data); // eslint-disable-line
 };
 
-export default getAppId;
+const gameKey = 'pYoDA8k987Eio52IyF50';
+
+export { gameKey, getAppId };
 
 // App ID: 1
 // pYoDA8k987Eio52IyF50
