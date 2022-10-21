@@ -1,7 +1,7 @@
 import getPokemon from '../apis/getPokemon.js';
 import getComments from '../popup/getComments.js';
 import { popup, renderPopup, homeSection } from '../popup/renderPopup.js';
-import { addLike, getLikes } from './likes.js';
+import { addLike } from './likes.js';
 
 const pokemonList = [];
 
@@ -37,7 +37,6 @@ const write = (list) => {
   likeBtn.forEach((button, index) => {
     button.addEventListener('click', () => {
       addLike(index);
-      getLikes(index-1);
     });
   });
 };
