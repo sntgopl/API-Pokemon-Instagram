@@ -10,6 +10,8 @@ const mmm = (data) => {
 };
 
 const write = (list) => {
+  const counter = document.querySelector('.counter');
+  counter.innerHTML = `Pokedex(${pokemonList.length})`;
   homeSection.innerHTML = list.map((data) => `
 <div class="card">
 <img class="pokemon-img" src="${data.sprites.front_default}" alt="Pokemon img">
