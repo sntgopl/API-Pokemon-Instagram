@@ -1,10 +1,11 @@
-export const popup = document.querySelector('#popup');
-export const homeSection = document.querySelector('#homepage');
+import Comment from './newComment.js';
+import postComment from './postComment.js';
+import getComments from './getComments.js';
 
-export const renderPopup = (data) => {
-  // keep this console.log to check the data fetched in the console
-  console.log(data.sprites.front_default); // eslint-disable-line
+const popup = document.querySelector('#popup');
+const homeSection = document.querySelector('#homepage');
 
+const renderPopup = (data) => {
   const content = `
   <button type="button" id="close-btn">X</button>
   <img class="popup-img" src="${data.sprites.front_default}" alt="popup image">
@@ -20,6 +21,11 @@ export const renderPopup = (data) => {
     <ul id="comments-list">
     </ul>
   </div>
+  <form id="comment-form">
+    <h3>Add a comment</h3>
+    <input type="text" id="name" placeholder="Your name" required>
+    <textarea id="comment" placeholder="Your insights" required></textarea>
+    <button type="submit" id="comment-btn">Comment</button>
   `;
   popup.innerHTML = content;
 
@@ -28,4 +34,19 @@ export const renderPopup = (data) => {
     popup.style.display = 'none';
     homeSection.style.display = 'flex';
   });
+
+  const commentForm = document.querySelector('#comment-form');
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+    const newComment = new Comment(data.id, name, comment);
+    postComment(newComment);
+    commentForm.reset();
+    alert('Comment added successfully'); // eslint-disable-line
+    getComments(data.id);
+  });
 };
+
+// Is it needed to export these to DOM elements (popup, homeSEction)?
+export { popup, homeSection, renderPopup };

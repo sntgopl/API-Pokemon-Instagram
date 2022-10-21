@@ -48,7 +48,9 @@ li {
   border: 6px inset;
 }
 
-#popup h2 {
+#popup,
+h2,
+#comment-btn {
   padding: 0.3rem;
   border: 5px inset;
   border-radius: 5px 15px 0 15px;
@@ -224,4 +226,44 @@ footer {
   border-radius: 30px;
   padding: 1rem;
   background-color: rgb(255, 221, 221);
+}
+
+/* form styles */
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  width: 70%;
+}
+
+form > h3 {
+  align-self: center;
+}
+
+#comment-btn {
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#name,
+#comment {
+  font-family: 'Gill Sas', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 3px inset;
+}
+
+#name {
+  width: 50%;
+}
+
+#comment {
+  width: 80%;
+  height: 10vh;
+  resize: none;
+}
+
+.comments-none {
+  font-style: italic;
+  font-weight: 100;
 }

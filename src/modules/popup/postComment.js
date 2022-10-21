@@ -1,7 +1,4 @@
-import Comment from './newComment.js';
-
-const postComment = async () => {
-  const comment = new Comment('1', 'username', 'comment');
+const postComment = async (comment) => {
   const api = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
   const appId = 'IJd6Da8dwtRjMMAE92Va';
   const url = `${api}${appId}/comments`;
