@@ -27,7 +27,6 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
-    "gh-pages": "^4.0.0",
     "global-jsdom": "^8.6.0",
     "hint": "^2.0.0",
     "html-webpack-plugin": "^5.5.0",
@@ -44,7 +43,8 @@
     "webpack-dev-server": "^4.10.0"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "gh-pages": "^4.0.0"
   },
   "jest": {
     "testEnvironment": "jsdom",
