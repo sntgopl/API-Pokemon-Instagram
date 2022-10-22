@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 98vw;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 99vh;
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(193, 255, 234);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 100%;
+  border: 5px solid black;
+  border-radius: 30px;
+  padding: 1rem;
+  background-color: rgb(255, 221, 221);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#logo {
+  height: 4rem;
+  width: auto;
+}
+
+li {
+  list-style: none;
+}
+
+#popup {
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+  top: 5vh;
+  left: 35vw;
+  width: 30vw;
+  height: auto;
+  background-image: radial-gradient(circle, white, rgba(255, 205, 140, 0.685), gold);
+  box-shadow: 5px 5px 15px rgba(48, 27, 0, 0.918);
+  border-radius: 15px;
+  border: 6px inset;
+}
+
+#popup,
+h2,
+#comment-btn {
+  padding: 0.3rem;
+  border: 5px inset;
+  border-radius: 5px 15px 0 15px;
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.685);
+}
+
+.popup-img {
+  width: 60%;
+  height: auto;
+  background-image: linear-gradient(45deg, red, blue);
+  animation: background 15s linear infinite;
+}
+
+#close-btn {
+  align-self: flex-end;
+  background-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid rgba(255, 250, 244, 0.685);
+  border-radius: 10px;
+  color: rgba(48, 27, 0, 0.918);
+}
+
+.attributes {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 80%;
+  border: 3px inset;
+  padding: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-shadow: 1.5px 1.5px black;
+}
+
+#comments-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  align-self: start;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+#comments-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  gap: 1rem;
+}
+
+.comment {
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+/* hello */
+
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 10vw;
+}
+
+#homepage {
+  height: auto;
+  width: 99vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.card {
+  background-color: rgba(255, 205, 140, 0.685);
+  border-radius: 15px 50px;
+  border: 3px inset;
+  height: 30vh;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 7px 7px 10px rgba(110, 66, 8, 0.918);
+}
+
+.card:hover {
+  box-shadow: 10px 10px 15px rgba(48, 27, 0, 0.918);
+}
+
+.pokemon-img {
+  border-radius: 200px 100px 150px 150px;
+  height: 35%;
+  width: 35%;
+  background-image: linear-gradient(45deg, red, blue);
+  animation: background 15s linear infinite;
+}
+
+@keyframes background {
+  0% {
+    background-image: linear-gradient(60deg, red, blue);
+    border-radius: 150px 200px 100px 150px;
+  }
+
+  25% {
+    background-image: linear-gradient(75deg, red, blue);
+    border-radius: 150px 150px 200px 100px;
+  }
+
+  50% {
+    background-image: linear-gradient(60deg, red, blue);
+    border-radius: 100px 150px 150px 200px;
+  }
+
+  75% {
+    background-image: linear-gradient(45deg, red, blue);
+    border-radius: 200px 100px 150px 150px;
+  }
+}
+
+.pokemon-name {
+  border: 2px inset;
+  border-radius: 15px 5px 15px 5px;
+  padding: 0.5rem;
+  background-color: blanchedalmond;
+  box-shadow: 3px 3px 5px rgba(54, 37, 13, 0.685);
+}
+
+.card-data {
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.like-section {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.comment-button {
+  background-color: rgb(255, 208, 208);
+  border: 3px solid black;
+  border-radius: 5px 10px 5px 10px;
+  padding: 10px;
+  box-shadow: 3px 3px black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.number {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 1px 1px 2px black;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 98vw;
+  border: 5px solid black;
+  border-radius: 30px;
+  padding: 1rem;
+  background-color: rgb(255, 221, 221);
+}
+
+/* form styles */
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  width: 70%;
+}
+
+form > h3 {
+  align-self: center;
+}
+
+#comment-btn {
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#name,
+#comment {
+  font-family: 'Gill Sas', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 3px inset;
+}
+
+#name {
+  width: 50%;
+}
+
+#comment {
+  width: 80%;
+  height: 10vh;
+  resize: none;
+}
+
+.comments-none {
+  font-style: italic;
+  font-weight: 100;
+}
