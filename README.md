@@ -70,4 +70,4 @@ Minimalist Leaderboard list
 
 ## 📝 License
 
-This project is MIT licensed.
+This project is [MIT](/LICENSE.txt) licensed.
