@@ -22,6 +22,10 @@ To get a local copy up and running please download the zip file or clone it via 
 
 [Click here!](https://sntgopl.github.io/API-Pokemon-Instagram/dist/)
 
+### Live Presentation
+
+[video](https://drive.google.com/file/d/1xn30tRNJqa6JnuzH7G93YGM7DtiINMnF/view?usp=sharing)
+
 ### Clone and review it
 
 Run the following commands to clone and run it.
