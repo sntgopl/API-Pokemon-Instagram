@@ -25,9 +25,14 @@ const writeList = (list) => {
   return content;
 };
 
-const write = () => {
+const count = () => {
   const counter = document.querySelector('.counter');
   counter.innerHTML = `Pokedex(${pokemonList.length})`;
+  return counter;
+};
+
+const write = () => {
+  count();
   homeSection.innerHTML = writeList(pokemonList);
   const commentBtn = document.querySelectorAll('.comment-button');
   commentBtn.forEach((button, index) => {
@@ -53,4 +58,6 @@ const fetchList = async (n) => {
   write();
 };
 
-export { pokemonList, fetchList, writeList };
+export {
+  pokemonList, fetchList, writeList, mmm,
+};

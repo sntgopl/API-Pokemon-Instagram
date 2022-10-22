@@ -1,8 +1,8 @@
-const pokemonList = [
+const pokemons = [
   {
     name: 'Camaleon',
     sprites: {
-      beach: 'playground',
+      front_default: 'playground',
       place: 'nnorth',
     },
     id: 3,
@@ -31,4 +31,4 @@ const mhtml = `
 </section>
 `;
 
-export { pokemonList, mhtml };
+export { pokemons, mhtml };
