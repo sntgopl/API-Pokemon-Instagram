@@ -8,8 +8,6 @@ describe('Card counter', () => {
 
     // Act
     const content = writeList(pokemons);
-    // crear html para anexarle con innerhtml
-    // seleccionar con queryselector
     const section = document.querySelector('#homepage');
     const counter = document.createElement('div');
     counter.innerHTML = content;
@@ -17,7 +15,6 @@ describe('Card counter', () => {
     const number = document.querySelectorAll('.card');
 
     // Assert
-    // const card = document.getElementsByTagName('section').length;
     expect(number.length).toBe(3);
   });
 

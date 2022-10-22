@@ -48,5 +48,4 @@ const renderPopup = (data) => {
   });
 };
 
-// Is it needed to export these to DOM elements (popup, homeSEction)?
 export { popup, homeSection, renderPopup };
