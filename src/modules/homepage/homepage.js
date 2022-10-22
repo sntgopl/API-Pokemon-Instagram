@@ -9,11 +9,9 @@ const mmm = (data) => {
   pokemonList.push(data);
 };
 
-const write = (list) => {
-  const counter = document.querySelector('.counter');
-  counter.innerHTML = `Pokedex(${pokemonList.length})`;
-  homeSection.innerHTML = list.map((data) => `
-<div class="card">
+const writeList = (list) => {
+  const content = list.map((data) => `
+  <div class="card">
 <img class="pokemon-img" src="${data.sprites.front_default}" alt="Pokemon img">
 <div class="card-data">
 <h2 class="pokemon-name">${data.name.toUpperCase().slice(0, 1) + data.name.slice(1, data.name.length)}</h2>
@@ -22,8 +20,20 @@ const write = (list) => {
 <button class="comment-button">Comments</button>
 <p class="number">#${data.id.toString().padStart(3, 0)}</p>
 </div>
-`)
+  `)
     .join(' ');
+  return content;
+};
+
+const count = () => {
+  const counter = document.querySelector('.counter');
+  counter.innerHTML = `Pokedex(${pokemonList.length})`;
+  return counter;
+};
+
+const write = () => {
+  count();
+  homeSection.innerHTML = writeList(pokemonList);
   const commentBtn = document.querySelectorAll('.comment-button');
   commentBtn.forEach((button, index) => {
     button.addEventListener('click', () => {
@@ -45,7 +55,9 @@ const fetchList = async (n) => {
   for (let i = 1; i < n; i += 1) {
     await getPokemon(i, mmm); // eslint-disable-line
   }
-  write(pokemonList);
+  write();
 };
 
-export default fetchList;
+export {
+  pokemonList, fetchList, writeList, mmm,
+};
